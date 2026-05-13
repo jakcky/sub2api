@@ -46,22 +46,6 @@ docker compose up -d sub2api
 
 Use `--no-cache` only when troubleshooting dependency or base-image issues.
 
-## Pnpm Version
-
-Pin pnpm in Docker builds. Do not use `pnpm@latest`, because newer pnpm versions
-can fail Docker builds with `ERR_PNPM_IGNORED_BUILDS`.
-
-Keep both files pinned:
-
-- `Dockerfile`
-- `deploy/Dockerfile`
-
-Expected line:
-
-```dockerfile
-RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
-```
-
 ## Upstream Merge Workflow
 
 Recommended local workflow:
@@ -83,4 +67,3 @@ On the server, `origin` should point to:
 ```text
 https://github.com/jakcky/sub2api.git
 ```
-
