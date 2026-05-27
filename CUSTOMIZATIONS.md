@@ -38,7 +38,8 @@ Server build commands:
 
 ```bash
 cd /var/www/sub2api
-git pull origin main
+git fetch upstream
+git merge upstream/main
 cd deploy
 docker compose build sub2api
 docker compose up -d sub2api
@@ -51,8 +52,8 @@ Use `--no-cache` only when troubleshooting dependency or base-image issues.
 Recommended local workflow:
 
 ```bash
-git fetch origin
-git merge origin/main
+git fetch upstream
+git merge upstream/main
 ```
 
 After resolving conflicts, verify the customizations above are still present,
@@ -62,8 +63,12 @@ then push to the fork:
 git push jakcky main
 ```
 
-On the server, `origin` should point to:
+On the server, remotes should be:
 
-```text
-https://github.com/jakcky/sub2api.git
+```bash
+git remote -v
+# origin   https://github.com/jakcky/sub2api.git (fetch)
+# origin   https://github.com/jakcky/sub2api.git (push)
+# upstream https://github.com/Wei-Shaw/sub2api.git (fetch)
+# upstream https://github.com/Wei-Shaw/sub2api.git (push)
 ```
