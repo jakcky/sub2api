@@ -67,8 +67,8 @@ On the server, remotes should be:
 
 ```bash
 git remote -v
-# origin   https://github.com/jakcky/sub2api.git (fetch)
-# origin   https://github.com/jakcky/sub2api.git (push)
+# origin   git@github.com:jakcky/sub2api.git (fetch)
+# origin   git@github.com:jakcky/sub2api.git (push)
 # upstream https://github.com/Wei-Shaw/sub2api.git (fetch)
 # upstream https://github.com/Wei-Shaw/sub2api.git (push)
 ```
